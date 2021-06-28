@@ -1,8 +1,9 @@
-const assertEqual = require("../assertEqual");
-const tail= require("../tail");
+// const assertEqual = require("../assertEqual").;
+const assert = require("chai").assert;
+const tail = require("../tail");
 
-
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-const results = tail(words);
-
-assertEqual(words.length, 3);
+describe("#tail", () => {
+  it("returns array without the first item", () => {
+    assert.deepEqual(tail(["Yo Yo", "Lighthouse", "Labs"]), ["Lighthouse", "Labs"]);
+  });
+});
